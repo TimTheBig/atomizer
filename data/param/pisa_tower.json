@@ -1,0 +1,6 @@
+{
+    "solid_name": "pisa_tower",
+    "deposition_width": 0.9,
+    "max_slope": 5.5,
+    "ortho_to_wall": false
+}

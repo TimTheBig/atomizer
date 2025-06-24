@@ -1,0 +1,6 @@
+.vscode
+__pycache__
+*.egg-info
+*.egg-info
+imgui.ini
+.DS_Store

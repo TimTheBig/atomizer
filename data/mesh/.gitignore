@@ -1,0 +1,14 @@
+*.obj
+*.stl
+*.ply
+*.mtl
+!ankle.stl
+!calibration_cube.stl
+!car.stl
+!city_final.stl
+!cubic.stl
+!dome.stl
+!triangle_24.stl
+!opposite_curvature_final_90.stl
+!pisa_tower.stl
+!tubes.stl

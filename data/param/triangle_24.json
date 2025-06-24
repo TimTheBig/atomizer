@@ -1,0 +1,6 @@
+{
+    "solid_name": "triangle_24",
+    "deposition_width": 0.9,
+    "max_slope": 25.0,
+    "ortho_to_wall": false
+}

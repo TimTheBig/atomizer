@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atom"
+version = "0.1.0"
+authors = [
+    {name = "Xavier Chermain", email = "xavier.chermain@inria.fr"},
+]
+description = "Mesh Atomizer"
+readme = "README.md"
+requires-python = ">=3.7, <3.11"
+keywords = ["graphics", "fabrication"]
+license = {file = "LICENSE"}
+dependencies = [
+    "numpy",
+    "pyvista",
+    "taichi",
+    "tqdm",
+    "Pillow",
+]

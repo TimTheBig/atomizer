@@ -1,0 +1,6 @@
+{
+    "solid_name": "cubic",
+    "deposition_width": 0.9,
+    "max_slope": 5.5,
+    "top_lines": "data/image/cubic.png"
+}

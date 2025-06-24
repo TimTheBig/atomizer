@@ -1,0 +1,7 @@
+{
+    "solid_name": "dome",
+    "deposition_width": 0.9,
+    "max_slope": 5.5,
+    "top_lines": "data/image/yin_yang.png",
+    "bottom_lines": "data/image/0.png"
+}

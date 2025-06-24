@@ -1,0 +1,7 @@
+{
+    "solid_name": "opposite_curvature_final_90",
+    "deposition_width": 0.9,
+    "max_slope": 7.0,
+    "top_lines": "data/image/90.png",
+    "bottom_lines": "data/image/0.png"
+}
