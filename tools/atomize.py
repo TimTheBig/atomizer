@@ -172,7 +172,6 @@ if __name__ == "__main__":
     extract_explicit_atoms_cmd = f"python tools/extract_explicit_atoms.py {params.sdf_path} {params.triphasor_path} {params.frame_path} --logpath {params.log_path}"
     order_atoms_cmd = f"python tools/order_atoms.py {params.sdf_path} {params.frame_path} {params.toolpath_path} --logpath {params.log_path}"
     smooth_toolpath_point_cmd = f"python tools/smooth_toolpath_point.py {params.toolpath_path} {params.smoothed_toolpath_path} {params.smoothing_iter_count}"
-    tesselate_toolpath_orientation_cmd = f"python tools/tesselate_toolpath_orientations.py {params.smoothed_toolpath_path} {params.smoothed_tesselated_toolpath_path} {params.degree_angle_max_diff}"
 
     visualize_bpn_cmd = f"python tools/visualize_bpn.py {params.bpn_path}"
     visualize_bpn_sdf_cmd = (
@@ -190,7 +189,7 @@ if __name__ == "__main__":
     visualize_implicit_atoms_cmd = f"python tools/visualize_implicit_atoms.py {params.bpn_path} {params.triphasor_path}"
     visualize_explicit_atoms_cmd = f"python tools/visualize_explicit_atoms.py {params.frame_path} {layer_height:.3f}"
     visualize_toolpath_cmd = (
-        f"python tools/visualize_toolpath.py {params.toolpath_path}"
+        f"python tools/visualize_toolpath.py {params.smoothed_toolpath_path}"
     )
 
     log_file.write("\n# Pipeline commands\n\n")
@@ -204,7 +203,6 @@ if __name__ == "__main__":
     log_file.write(extract_explicit_atoms_cmd + "\n")
     log_file.write(order_atoms_cmd + "\n")
     log_file.write(smooth_toolpath_point_cmd + "\n")
-    log_file.write(tesselate_toolpath_orientation_cmd + "\n")
 
     log_file.write("\n# Visualize commands\n\n")
     log_file.write(visualize_bpn_cmd + "\n")
@@ -288,5 +286,4 @@ if __name__ == "__main__":
     log_file.write("\n# Smooth and Tesselate the Toolpath\n\n")
     log_file.close()
     os.system(smooth_toolpath_point_cmd)
-    # os.system(tesselate_toolpath_orientation_cmd)
     log_file = open(params.log_path, "a", encoding="utf-8")
