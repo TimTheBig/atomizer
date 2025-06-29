@@ -14,14 +14,14 @@ This repository contains the implementation of **Atomizer**, a novel toolpath ge
 
 [Computer Graphics Forum](https://doi.org/10.1111/cgf.70189) ([Proceedings of the Symposium on Geometry Processing](https://sgp2025.my.canva.site/program-page-sgp)), 2025
 
-## 🌟 Key Features
+## Key Features
 
 * Toolpath generation using frames (i.e., atoms) instead of slices
 * Control of the deposition direction and tool orientation
 * Collision-free fabrication ordering
 * Support for anisotropic appearance on curved surfaces
 
-## 📦 Installation
+## Installation
 
 ### Clone the Repository
 
@@ -62,7 +62,7 @@ pip install --user -e .
 
 Blender is only used to automatically remesh the 3D model for the atomizer. You need to install it and add it to the executable path.
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 atomizer/
@@ -92,7 +92,7 @@ atomizer/
 └── README.md
 ```
 
-## 🚀 Usage
+## Usage
 
 ```
 python tools/atomize.py data/param/triangle_24.json
@@ -126,63 +126,11 @@ Tools' manuals are accessible by typing `--help`, e.g.,
 python tools/atomize.py --help
 ```
 
-## 📊 Performance
+## 3D Printer
 
-Table 1 in the paper shows detailed statistics. Sample performance for the “Cube” model:
+Atomizer was tested on a custom 3-axis printer with independently controlled Z-axis screws. The custumization is for experts, and consequently, we do not provide any GCODE to prevent people damaging their machine. The code only generates the sequence of positions, each associated with a tool orientation and a travel type (deposition or no deposition). To print, you have to use your machine inverse kinematics.
 
-* Voxels: \~1.7M
-* Atoms: \~43k
-* Memory: \~100 MB
-* Total time: \~16 minutes (GPU + CPU)
-
-* Can leverage CUDA-capable GPU (tested on NVIDIA RTX 2080 Ti) for the atomizing process. The atoms ordering is single-thread CPU.
-
-## 🖨️ 3D Printer
-
-Atomizer was tested on a custom 3-axis printer with independently controlled Z-axis screws. The custumization is for experts, and consequently, we do not provide any GCODE to prevent people damaging their machine. The code only generates the sequence of positions, each associated with a tool orientation and a travel type (deposition or no deposition). To print, you have to use your machine inverse kinematics. For the curious, we detail our custom machine in the following sections.
-
-### Our custom machine description
-
-**Firmware:** RepRapFirmware (RRF)
-**Machine:** RatRig V-Core 3.1 (300mm build volume)
-**Kinematics:** CoreXY with 3 independent Z axes
-
-### Motion System
-
-* **AWD Gantry:** Four motors driving the gantry (All-Wheel Drive setup)
-* **Z Drive:** Ball screws replacing lead screws for improved Z-axis precision (at the cost of potential speed reduction)
-* **Power Supply:** 48V system dedicated to gantry motion for enhanced performance
-
-### Toolhead & Hotend
-
-* **Toolhead:** VZBot-style lightweight toolhead
-* **Hotend:** Goliath hotend with an extended melt zone
-
-  * Provides increased clearance between the toolhead and the bed surface
-* **Cooling:** CPAP-based active cooling system
-
-  * High airflow for effective cooling
-  * Designed for minimal interference with the bed due to compact form factor
-
-### Nozzle
-
-* **Brand:** Non-Planar XYZ
-* **Size:** 0.6 mm
-* **Design Characteristics:**
-
-  * Extended nozzle length for additional clearance between the hotend and bed
-  * Narrow conical tip with a reduced flat contact area compared to standard nozzles — ideal for non-planar printing
-
-### Probing System
-
-* **Probe:** Modified, extended Klicky probe
-
-  * Dockable design prevents collisions during printing
-  * Allows accurate bed probing without compromising toolhead clearance
-
-
-
-## 📄 Citation
+## Citation
 
 If you use this code in your research, please cite:
 
@@ -196,11 +144,7 @@ doi = {https://doi.org/10.1111/cgf.70189},
 }
 ```
 
-## 🧪 License
+## License
 
 The source code is under the BSD 3-Clause "New" or "Rivised" license. See
 [LICENSE](LICENSE) for more details.
-
-## 🙋 Contact
-
-For questions or contributions, feel free to open an issue or contact [Xavier Chermain](https://github.com/xavierchermain).
