@@ -188,11 +188,11 @@ If you use this code in your research, please cite:
 
 ```
 @article{Chermain2025Atomizer,
-  author = {Chermain, Xavier and Cocco, Giovanni and Zanni, Cédric and Garner, \'Eric and Hugron,   Pierre-Alexandre and Lefebvre, Sylvain},
-  title = {{Atomizer: Beyond Non-Planar Slicing for Fused Filament Fabrication}},
-  journal = {Computer Graphics Forum (Proceedings of the Symposium on Geometry Processing)},
-  year = {2025}
-  doi = {https://doi.org/10.1111/cgf.70189},
+author = {Chermain, Xavier and Cocco, Giovanni and Zanni, Cédric and Garner, Eric and Hugron, Pierre-Alexandre and Lefebvre, Sylvain},
+title = {{Atomizer: Beyond Non-Planar Slicing for Fused Filament Fabrication}},
+journal = {Computer Graphics Forum (Proceedings of the Symposium on Geometry Processing)},
+year = {2025}
+doi = {https://doi.org/10.1111/cgf.70189},
 }
 ```
 
