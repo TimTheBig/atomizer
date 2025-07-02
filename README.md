@@ -128,34 +128,34 @@ python tools/atomize.py --help
 ```
 atomizer/
 ├── tools/                             # The main tools
-|    └── atomize.py                    # Main pipeline entry point
-|    └── bpn_to_sdf.py                 # SDF generation and voxelization
-|    └── compute_tool_orientations.py  # Tool orientation field optimization
-|    └── compute_tangents.py           # Deposition tangent field optimization
-|    └── align_atoms.py                # Tricosine field optimization
-|    └── extract_explicit_atoms.py     # Atom extraction
-|    └── order_atoms.py                # Atom ordering
-|    └── visualize_bpn_sdf.py          # Visualize SDF
-|    └── visualize_bpn_df.py           # Visualize tool orientation field
-|    └── visualize_bases.py            # Visualize deposition tangent field
-|    └── visualize_implicit_atoms.py   # Visualize tricosine field
-|    └── visualize_explicit_atoms.py   # Visualize explicit atoms
-|    └── visualize_toolpath.py         # Visualize generated toolpath
-|    └── ...                           # Other tools
-├── data/                              # Input and output data
-|    └── mesh/                         # Input STLs
-|    └── param/                        # Input parameter JSON files
-|    └── toolpath/                     # Output toolpaths
-|    └── ...                           # Other data
+│    │── atomize.py                    # Main pipeline entry point
+│    │── bpn_to_sdf.py                 # SDF generation and voxelization
+│    │── compute_tool_orientations.py  # Tool orientation field optimization
+│    │── compute_tangents.py           # Deposition tangent field optimization
+│    │── align_atoms.py                # Tricosine field optimization
+│    │── extract_explicit_atoms.py     # Atom extraction
+│    │── order_atoms.py                # Atom ordering
+│    │── visualize_bpn_sdf.py          # Visualize SDF
+│    │── visualize_bpn_df.py           # Visualize tool orientation field
+│    │── visualize_bases.py            # Visualize deposition tangent field
+│    │── visualize_implicit_atoms.py   # Visualize tricosine field
+│    │── visualize_explicit_atoms.py   # Visualize explicit atoms
+│    │── visualize_toolpath.py         # Visualize generated toolpath
+│    └── ...                           # Other tools
+│── data/                              # Input and output data
+│    │── mesh/                         # Input STLs
+│    │── param/                        # Input parameter JSON files
+│    │── toolpath/                     # Output toolpaths
+│    └── ...                           # Other data
 ├── src/atom/                          # Local library with core functionalities
-├── experiment/                        # To experiment some core functionalities
-├── generate_results.ps1               # Script generating the toolpaths
+├── experiment/                        # For experimenting with core functionalities
+├── generate_results.ps1               # Script to generate toolpaths
 └── README.md
 ```
 
 ## 3D Printer
 
-Atomizer was tested on a custom 3-axis printer with independently controlled Z-axis screws. The custumization is for experts, and consequently, we do not provide any GCODE to prevent people damaging their machine. The code only generates the sequence of positions, each associated with a tool orientation and a travel type (deposition or no deposition). The generated toolpaths are in [`data/toolpath`](data/toolpath). To print, you have to use your machine inverse kinematics model.
+Atomizer was tested on a custom 3-axis printer with independently controlled Z-axis screws. The customization is intended for experts; consequently, we do not provide any GCODE to prevent users from damaging their machines. The code generates only the sequence of positions, each associated with a tool orientation and a travel type (deposition or no deposition). The generated toolpaths are available in [`data/toolpath`](data/toolpath). To print, you must use the inverse kinematics model of your machine.
 
 ## Citation
 
