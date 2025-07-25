@@ -7,6 +7,7 @@ command -v conda >/dev/null || echo "conda not found in PATH, try init.sh" || ex
 # trap ERR to report the failing command
 trap 'echo "Command failed: $BASH_COMMAND" >&2' ERR
 
+conda activate atomizer
 # python3="conda run python3"
 
 conda run "python tools/atomize.py data/param/triangle_24.json"
